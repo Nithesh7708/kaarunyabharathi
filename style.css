@@ -181,8 +181,177 @@ fill: white;
     background: #ffffffab;
 }
 /* Slider page END*/
+/* <!-- Institute Advantage --> */
+.institute_container{
+    width: 100vw;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient(90deg,rgb(153, 3, 3),rgb(66, 0, 0));
+}
+.institute_container .institute{
+    width: 90vw;
+    height: 100%;
+    max-width: 1920px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.institute_container .institute .list{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.institute_container .institute .list .img{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.institute_container .institute .list .img img{
+    width: 25%;
+}
+.institute_container .institute .list h1{
+    color: white;
+    font-size: 24px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* <!-- Institute Advantage END--> */
+ /* child creativity Section */
+ .creative_slider {
+    position: relative;
+    max-width: 1920px;
+    margin: 10px 0px;
+    overflow: hidden;
+    width: 95vw;
+    display: flex;
+    height: 250px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.creative_slider .slider {
+    width: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.creative_slider .slider_wraper {
+    position: absolute;
+    width: auto;
+    left: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.creative_slider .slider .slides {
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: #3c9b22;
+}
+
+.creative_slider .button_creative {
+    width: 100%;
+    height: 0px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.creative_slider .button_creative .left,
+.creative_slider .button_creative .right {
+    width: 60px;
+    height: 60px;
+    background-color: #711818bb;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.creative_slider .button_creative .left svg,
+.creative_slider .button_creative .right svg {
+    fill: white;
+    width: 40%;
+}
+/* child creativity Section END*/
 /* Mobile device */
+
 @media (max-width:480px) {
+/* child creativity Section */
+    .creative_slider .button_creative .left,
+    .creative_slider .button_creative .right{
+        width:40px;
+        height: 40px;
+    }
+    .creative_slider .button_creative .left svg,
+    .creative_slider .button_creative .right svg{
+        fill: white;
+        width:30%;
+    }
+    .creative_slider{
+        height: 170px;
+
+    }
+    .creative_slider .slider .slides{
+        width: 300px;
+        }
+    /* child creativity Section END*/
+/* <!-- Institute Advantage --> */
+.institute_container{
+    height: 400px;
+}
+.institute_container .institute{
+    width: 100vw;
+    height: 30%;
+    flex-direction: column;
+    gap: 25px;
+}
+.institute_container .institute .list{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.institute_container .institute .list .img{
+    width: 100%;
+    height: 40%;
+}
+.institute_container .institute .list .img img{
+    width: 60px;
+}
+.institute_container .institute .list h1{
+    color: white;
+    font-size: 20px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* <!-- Institute Advantage END--> */
 /* Navcation section */
 .menu_icon{
     cursor: pointer;
@@ -294,6 +463,59 @@ width: 30%;
 /* ---------------------------------------- */
 
 @media(min-width:481px){
+    
+/* child creativity Section */
+.creative_slider .button_creative .left,
+.creative_slider .button_creative .right{
+    width:40px;
+    height: 40px;
+}
+.creative_slider .button_creative .left svg,
+.creative_slider .button_creative .right svg{
+    fill: white;
+    width:30%;
+}
+.creative_slider{
+    height: 170px;
+
+}
+.creative_slider .slider .slides{
+    width: 300px;
+    }
+/* child creativity Section END*/
+/* <!-- Institute Advantage --> */
+.institute_container{
+    height: 400px;
+}
+.institute_container .institute{
+    width: 100vw;
+    height: 30%;
+    flex-direction: column;
+    gap: 25px;
+}
+.institute_container .institute .list{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.institute_container .institute .list .img{
+    width: 100%;
+    height: 40%;
+}
+.institute_container .institute .list .img img{
+    width: 60px;
+}
+.institute_container .institute .list h1{
+    color: white;
+    font-size: 20px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* <!-- Institute Advantage END--> */
 /* Navcation section */
 .menu_icon{
     cursor: pointer;
@@ -406,6 +628,39 @@ width: 38%;
 /* ------------------------------------------- */
 
 @media (min-width: 769px) and (max-width: 1024px) {
+/* <!-- Institute Advantage --> */
+.institute_container{
+    height: 400px;
+}
+.institute_container .institute{
+    width: 100vw;
+    height: 30%;
+    flex-direction: column;
+    gap: 25px;
+}
+.institute_container .institute .list{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.institute_container .institute .list .img{
+    width: 100%;
+    height: 40%;
+}
+.institute_container .institute .list .img img{
+    width: 60px;
+}
+.institute_container .institute .list h1{
+    color: white;
+    font-size: 20px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* <!-- Institute Advantage END--> */
 /* Navcation section */
 .menu_icon{
     cursor: pointer;
@@ -519,6 +774,59 @@ width: 38%;
 /* ------------------------------------------- */
 
 @media(min-width:1025px){
+
+/* child creativity Section */
+.creative_slider .button_creative .left,
+.creative_slider .button_creative .right{
+    width:40px;
+    height: 40px;
+}
+.creative_slider .button_creative .left svg,
+.creative_slider .button_creative .right svg{
+    fill: white;
+    width:30%;
+}
+.creative_slider{
+    height: 200px;
+
+}
+.creative_slider .slider .slides{
+    width: 330px;
+    }
+/* child creativity Section END*/
+/* <!-- Institute Advantage --> */
+.institute_container{
+    height: 200px;
+}
+.institute_container .institute{
+    width: 50vw;
+    height: 40%;
+    flex-direction:row;
+    gap: 25px;
+}
+.institute_container .institute .list{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.institute_container .institute .list .img{
+    width: 100%;
+    height: 40%;
+}
+.institute_container .institute .list .img img{
+    width: 60px;
+}
+.institute_container .institute .list h1{
+    color: white;
+    font-size: 20px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* <!-- Institute Advantage END--> */
 /* Navcation section */
 .menu_icon{
     display: none;
@@ -620,7 +928,7 @@ align-items: center;
                 /* Slider page============= */
                 .slider_container{
                     width: 90vw;
-                    height:500px;
+                    height:800px;
                 }
                 .slider_container .control_btn .left,
                 .slider_container .control_btn .right{
@@ -638,6 +946,7 @@ align-items: center;
 /* ------------------------------------------- */
 
 @media(min-width:1201px){
+
 /* Navication page */
 .nav_container .right .menu_item{
     overflow: hidden;
@@ -674,6 +983,25 @@ text-decoration: none;
 font-size: 18px;
 transition: all 0.5s;
 }
+/* child creativity Section */
+.creative_slider .button_creative .left,
+.creative_slider .button_creative .right{
+    width:60px;
+    height: 60px;
+}
+.creative_slider .button_creative .left svg,
+.creative_slider .button_creative .right svg{
+    fill: white;
+    width:35%;
+}
+.creative_slider{
+    height: 250px;
+
+}
+.creative_slider .slider .slides{
+    width: 400px;
+    }
+/* child creativity Section END*/
 /* Navication page  End*/
 }
 
