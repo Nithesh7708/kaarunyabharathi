@@ -141,6 +141,9 @@ display: flex;
 align-items: center;
 justify-content: center;
 }
+.slider_container .sliders .slide img{
+    width: 100%;
+}
 .slider_container .sliders .slide:nth-child(even){
     background-color: rebeccapurple;
 }
@@ -183,12 +186,24 @@ fill: white;
 /* Slider page END*/
 /* <!-- Institute Advantage --> */
 .institute_container{
+    position: relative;
     width: 100vw;
     height: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
     background:linear-gradient(90deg,rgb(153, 3, 3),rgb(66, 0, 0));
+}
+.institute_container::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('./source/slider/all_student.webp');
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+    opacity: 0.1;
 }
 .institute_container .institute{
     width: 90vw;
@@ -226,102 +241,329 @@ fill: white;
 
 /* <!-- Institute Advantage END--> */
  /* child creativity Section */
- .creative_slider {
-    position: relative;
+.creativity_container{
+margin: 40px 0px;
+width: 100vw;
+height: 400px;
+position: relative;
+flex-direction: column;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.creativity_container::after{
+    content: '';
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    background:url('./source/slider/drawing_photos.avif');
+    background-size: 100%;
+    background-position: -650px;
+    opacity: 0.2;
+}
+.creativity_container .head{
     max-width: 1920px;
-    margin: 10px 0px;
-    overflow: hidden;
-    width: 95vw;
+    width: 90vw;
+    height: 50px;
     display: flex;
-    height: 250px;
+    align-items: center;
+    justify-self: flex-start;
+}
+.creativity_container .head .circle{
+    width: 35px;
+    height: 35px;
+    margin: 0px 10px;
+    background: #cb2b1588;
+    border-radius: 50%;
+}
+.creativity_container .head .text h1{
+    font-size: 24px;
+    color: #751600;
+}
+.creativity_container .head .line_head{
+    width: 100px;
+    height: 4px;
+    margin: 0px 10px;
+    border-radius: 20px;
+    background: #cb2b1588;
+}
+
+ .swiper-container {
+    position: relative;
+    margin-top: 20px;
+    overflow: hidden;
+    width: 90vw;
+    max-width: 1920px;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.swiper-slide{
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.swiper-slide img {
+    width: 24%;
+    margin: 0px 4px;
+    height: auto;
+}
+.swiper-pagination{
+    position: absolute;
+}
+ /* Custom styles for pagination bullets */
+ .swiper-pagination-bullet {
+    background-color: #820101 !important; /* Custom color for pagination bullets */
+    opacity: 1; /* Ensure the bullets are fully opaque */
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #601200 !important; /* Custom color for active pagination bullet */
+}
+
+/* Custom styles for navigation arrows */
+.swiper-button-next,
+.swiper-button-prev{
+width: 40px;
+height: 40px;
+ 
+   border-radius: 20px;
+}
+.swiper-button-next svg,
+.swiper-button-prev svg{
+fill: #df9800 !important; /* Custom color for navigation arrows */
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    content: '' !important; /* Hide default icons */
+}
+/* child creativity Section END*/
+/* Course information page==================> */
+.course_container{
+width: 100vw;
+height: 300px;
+margin: 20px 0px;
+background-color: #711818;
+}
+/* Course information page==================> */
+/* ===========Feedback Page */
+#feed_back_section{
+    position: relative;
+    width: 100vw;
+    margin: 0;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background-color: #540000;
+}
+#feed_back_section .head{
+    height: 80px;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    color: white;
+}
+.glide {
+    position: absolute;
+    overflow: hidden;
+    width: 90vw;
+    max-width: 1900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.glide__slide {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.feedback-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 110px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+.feedback-content .user{
+    width: 100%;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+}
+.feedback-content .user .profile{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #b9b9b9a8;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+.feedback-content .user .name{
+    width: 40%;
+    margin: 0px 6px;
+    display: flex;
     align-items: center;
     justify-content: flex-start;
 }
-
-.creative_slider .slider {
-    width: auto;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    justify-content: center;
-    transition: transform 0.3s ease-in-out;
+.feedback-content .user .name p{
+    font-size: 16px;
 }
-
-.creative_slider .slider_wraper {
-    position: absolute;
-    width: auto;
-    left: 0;
-    height: 100%;
+.feedback-content .rate{
+    height: 20px;
+    width: 70%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+    align-items: flex-start;
+    gap: 4px;
+    justify-content: flex-start;
 }
-
-.creative_slider .slider .slides {
-    width: 350px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    background: #3c9b22;
+.feedback-content .rate i{
+    font-size: 12px;
+    color: rgb(255, 174, 0);
 }
-
-.creative_slider .button_creative {
+.feedback-content .message{
     width: 100%;
-    height: 0px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.creative_slider .button_creative .left,
-.creative_slider .button_creative .right {
-    width: 60px;
-    height: 60px;
-    background-color: #711818bb;
-    border-radius: 10px;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
 }
-
-.creative_slider .button_creative .left svg,
-.creative_slider .button_creative .right svg {
-    fill: white;
-    width: 40%;
+.feedback-content .message p{
+    font-size: 14px;
+    text-align: center;
+    color: #656565;
 }
-/* child creativity Section END*/
+/* ------Feedback End Page------- */
 /* Mobile device */
 
 @media (max-width:480px) {
-/* child creativity Section */
-    .creative_slider .button_creative .left,
-    .creative_slider .button_creative .right{
-        width:40px;
-        height: 40px;
-    }
-    .creative_slider .button_creative .left svg,
-    .creative_slider .button_creative .right svg{
-        fill: white;
-        width:30%;
-    }
-    .creative_slider{
-        height: 170px;
+/* ===========Feedback Page */
+#feed_back_section{
+    position: relative;
+    width: 100vw;
+    padding: 20px 0px;
+    height:auto;
+}
+#feed_back_section .head{
+    height: 100px;
+    text-align: center;
+    width: 80%;
+    font-size: 12px;
+    font-weight: bold;
+}
+.feedback-content{
+    height: auto;
+}
+.feedback-content .user .profile{
+    width: 25px;
+    height: 25px;
+}
 
-    }
-    .creative_slider .slider .slides{
-        width: 300px;
-        }
+.feedback-content .user .name p{
+    font-size: 14px;
+}
+.feedback-content .rate{
+    height: 20px;
+    width: 60%;
+}
+.feedback-content .rate i{
+    font-size: 12px;
+    color: rgb(255, 174, 0);
+}
+.feedback-content .message{
+    margin: 4px 0px;
+}
+.feedback-content .message p{
+    font-size: 13px;
+    text-align: center;
+    color: #656565;
+}
+/* ------Feedback End Page------- */
+/* child creativity Section */
+ /* child creativity Section */
+.creativity_container{
+width: 100vw;
+height: auto;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+ .swiper-container {
+    position: relative;
+    margin-top: 20px;
+    overflow: hidden;
+    width: 95vw;
+    max-width: 1920px;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.swiper-slide{
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.swiper-slide img {
+    width:100%;
+    margin: 0px 4px;
+    height: auto;
+}
+.creativity_container{
+    margin: 10px 0px;
+}
+.creativity_container::after{
+    content: '';
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    background:url('./source/slider/drawing_photos.avif');
+    background-size: 140%;
+    background-position: 0px -128px;
+    opacity: 0.2;
+}
+
+.creativity_container .head .text h1{
+    font-size: 14px;
+}
+.creativity_container .head .line_head{
+    width: 50px;
+    height: 4px;
+
+}
+.creativity_container .head .circle{
+    width: 30px;
+    height: 30px;
+}
     /* child creativity Section END*/
 /* <!-- Institute Advantage --> */
 .institute_container{
-    height: 400px;
+    height: 300px;
 }
 .institute_container .institute{
     width: 100vw;
@@ -342,11 +584,11 @@ fill: white;
     height: 40%;
 }
 .institute_container .institute .list .img img{
-    width: 60px;
+    width: 40px;
 }
 .institute_container .institute .list h1{
     color: white;
-    font-size: 20px;
+    font-size: 16px;
     margin-top: 15px;
     text-align: center;
 }
@@ -460,28 +702,87 @@ width: 90%;
 .slider_container .control_btn  svg{
 width: 30%;
 }
+.swiper-wrapper{
+    width:10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+}
 /* ---------------------------------------- */
 
 @media(min-width:481px){
-    
-/* child creativity Section */
-.creative_slider .button_creative .left,
-.creative_slider .button_creative .right{
-    width:40px;
-    height: 40px;
+/* Feed back page */
+#feed_back_section .head{
+    height: 100px;
+    text-align: center;
+    width: 95%;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
 }
-.creative_slider .button_creative .left svg,
-.creative_slider .button_creative .right svg{
-    fill: white;
-    width:30%;
-}
-.creative_slider{
-    height: 170px;
 
-}
-.creative_slider .slider .slides{
-    width: 300px;
+/* feedback page End */
+/* child creativity Section */
+/* child creativity Section */
+.creativity_container{
+    width: 100vw;
+    height:auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     }
+     .swiper-container {
+        position: relative;
+        margin-top: 20px;
+        overflow: hidden;
+        width: 95vw;
+        max-width: 1920px;
+        height:100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .swiper-slide{
+        width: 100vw;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .swiper-slide img {
+        width: 100%;
+        margin: 0px 4px;
+        height: auto;
+    }
+    .creativity_container{
+        margin: 5px 0px;
+    }
+    .creativity_container::after{
+        content: '';
+        position:absolute;
+        height: 100%;
+        width: 100%;
+        background:url('./source/slider/drawing_photos.avif');
+        background-size: 140%;
+        background-position: 0px -128px;
+        opacity: 0.2;
+    }
+    
+    .creativity_container .head .text h1{
+        font-size: 18px;
+    }
+    .creativity_container .head .line_head{
+        width: 50px;
+        height: 4px;
+    
+    }
+    .creativity_container .head .circle{
+        width: 35px;
+        height: 35px;
+    }
+        /* child creativity Section END*/
 /* child creativity Section END*/
 /* <!-- Institute Advantage --> */
 .institute_container{
@@ -621,7 +922,7 @@ width: 90%;
     height: 40px;
 }
 .slider_container .control_btn  svg{
-width: 38%;
+width: 100%;
 }
 }
 
@@ -659,7 +960,33 @@ width: 38%;
     margin-top: 15px;
     text-align: center;
 }
+/* ---------------------------- */
+.creativity_container{
+    margin: 5px 0px;
+}
+.creativity_container::after{
+    content: '';
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    background:url('./source/slider/drawing_photos.avif');
+    background-size: 140%;
+    background-position: 0px -128px;
+    opacity: 0.2;
+}
 
+.creativity_container .head .text h1{
+    font-size: 22px;
+}
+.creativity_container .head .line_head{
+    width: 50px;
+    height: 4px;
+
+}
+.creativity_container .head .circle{
+    width: 35px;
+    height: 35px;
+}
 /* <!-- Institute Advantage END--> */
 /* Navcation section */
 .menu_icon{
@@ -759,7 +1086,7 @@ width: 90%;
                 /* Slider page============= */
 .slider_container{
     width: 90vw;
-    height:550px;
+    height:450px;
 }
 .slider_container .control_btn .left,
 .slider_container .control_btn .right{
@@ -776,23 +1103,39 @@ width: 38%;
 @media(min-width:1025px){
 
 /* child creativity Section */
-.creative_slider .button_creative .left,
-.creative_slider .button_creative .right{
-    width:40px;
-    height: 40px;
-}
-.creative_slider .button_creative .left svg,
-.creative_slider .button_creative .right svg{
-    fill: white;
-    width:30%;
-}
-.creative_slider{
-    height: 200px;
-
-}
-.creative_slider .slider .slides{
-    width: 330px;
+/* child creativity Section */
+.creativity_container{
+    width: 100vw;
+    height:auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     }
+     .swiper-container {
+        position: relative;
+        margin-top: 20px;
+        overflow: hidden;
+        width: 95vw;
+        max-width: 1920px;
+        height:100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .swiper-slide{
+        width: 100vw;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .swiper-slide img {
+        width: 100%;
+        margin: 0px 4px;
+        height: auto;
+    }
+        /* child creativity Section END*/
 /* child creativity Section END*/
 /* <!-- Institute Advantage --> */
 .institute_container{
@@ -868,20 +1211,21 @@ nav{
     justify-content: center;
 }
 .nav_container .left .logo img{
-width: 60%;
+width: 50%;
 }
 .nav_container .right{
-width: auto;
+width: 200px;
 margin-right: 40px;
 height: 100%;
 display: flex;
+justify-content: flex-start;
 align-items: center;
 } .nav_container .right{
     width: auto;
     margin-right: 2px;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content:flex-start;
     align-items: center;
 }
      .nav_container .right .menu_item{
@@ -897,7 +1241,7 @@ align-items: center;
         display: flex;
         flex-direction:row;
         align-items:center;
-        justify-content:center;
+        justify-content:flex-start;
         transition: 0.5s;
     }
     .nav_container .right .open{
@@ -920,15 +1264,21 @@ align-items: center;
     border-radius: 10px;
     color: var(--primary_color_dark--);
     text-decoration: none;
-    font-size: 15px;
+    font-size: 12px;
     transition: all 0.5s;
 }
+.nav_container .icon_menu_sub img{
+    position:relative;
+    top: 5px;
+    right:2px;
+    width: 20px;
+    }
 
 /* Navcation section  END*/
                 /* Slider page============= */
                 .slider_container{
                     width: 90vw;
-                    height:800px;
+                    height:500px;
                 }
                 .slider_container .control_btn .left,
                 .slider_container .control_btn .right{
@@ -946,7 +1296,49 @@ align-items: center;
 /* ------------------------------------------- */
 
 @media(min-width:1201px){
+/* ===========Feedback Page */
+#feed_back_section{
+    position: relative;
+    width: 100vw;
+    padding: 20px 0px;
+    height:auto;
+}
+#feed_back_section .head{
+    height: 100px;
+    text-align: center;
+    width: 95%;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+.feedback-content{
+    height: auto;
+}
+.feedback-content .user .profile{
+    width: 25px;
+    height: 25px;
+}
 
+.feedback-content .user .name p{
+    font-size: 14px;
+}
+.feedback-content .rate{
+    height: 20px;
+    width: 60%;
+}
+.feedback-content .rate i{
+    font-size: 12px;
+    color: rgb(255, 174, 0);
+}
+.feedback-content .message{
+    margin: 4px 0px;
+}
+.feedback-content .message p{
+    font-size: 13px;
+    text-align: center;
+    color: #656565;
+}
+/* ------Feedback End Page------- */
 /* Navication page */
 .nav_container .right .menu_item{
     overflow: hidden;
@@ -980,29 +1372,53 @@ padding: 10px;
 border-radius: 10px;
 color: var(--primary_color_dark--);
 text-decoration: none;
-font-size: 18px;
+font-size: 14px;
 transition: all 0.5s;
 }
 /* child creativity Section */
-.creative_slider .button_creative .left,
-.creative_slider .button_creative .right{
-    width:60px;
-    height: 60px;
-}
-.creative_slider .button_creative .left svg,
-.creative_slider .button_creative .right svg{
-    fill: white;
-    width:35%;
-}
-.creative_slider{
-    height: 250px;
 
-}
-.creative_slider .slider .slides{
-    width: 400px;
-    }
 /* child creativity Section END*/
 /* Navication page  End*/
+/* Slider page============= */
+.slider_container{
+    width: 90vw;
+    height:550px;
+}
+.slider_container .control_btn .left,
+.slider_container .control_btn .right{
+    width: 30px;
+    height: 30px;
+}
+.slider_container .control_btn  svg{
+width: 30%;
+}
+/* ------------------------------------------------------- */
+.creativity_container{
+    margin: 5px 0px;
+}
+.creativity_container::after{
+    content: '';
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    background:url('./source/slider/drawing_photos.avif');
+    background-size: 140%;
+    background-position: 0px -128px;
+    opacity: 0.2;
+}
+
+.creativity_container .head .text h1{
+    font-size: 24px;
+}
+.creativity_container .head .line_head{
+    width: 50px;
+    height: 4px;
+
+}
+.creativity_container .head .circle{
+    width: 35px;
+    height: 35px;
+}
 }
 
 /* ------------------------------------------- */

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Comment Slider</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .glide {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .glide__track {
+            margin-bottom: 20px;
+        }
+
+        .glide__slide {
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+
+        .feedback-content {
+            text-align: center;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        /* Custom styles for navigation arrows */
+        .glide__arrows .glide__arrow {
+            color: #007BFF !important;
+            font-size: 24px;
+        }
+
+        .glide__arrows .glide__arrow:before {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+        }
+
+        .glide__arrows .glide__arrow--prev {
+            left: -40px;
+        }
+
+        .glide__arrows .glide__arrow--next {
+            right: -40px;
+        }
+
+        /* Adjust arrow positioning */
+        @media (max-width: 768px) {
+            .glide__arrows .glide__arrow {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+                <li class="glide__slide">
+                    <div class="feedback-content">
+                        <p>"This is the first feedback comment. It was very helpful!"</p>
+                        <p>- User 1</p>
+                    </div>
+                </li>
+                <li class="glide__slide">
+                    <div class="feedback-content">
+                        <p>"Great service and support. Highly recommend!"</p>
+                        <p>- User 2</p>
+                    </div>
+                </li>
+                <li class="glide__slide">
+                    <div class="feedback-content">
+                        <p>"Very satisfied with the product quality and delivery time."</p>
+                        <p>- User 3</p>
+                    </div>
+                </li>
+                <li class="glide__slide">
+                    <div class="feedback-content">
+                        <p>"Exceptional experience from start to finish."</p>
+                        <p>- User 4</p>
+                    </div>
+                </li>
+                <!-- Add more slides as needed -->
+            </ul>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script>
+        new Glide('.glide', {
+            type: 'carousel',
+            startAt: 0,
+            perView: 1,
+            autoplay: 2500,
+            hoverpause: true,
+            breakpoints: {
+                350: { perView: 1 },
+                480: { perView: 1 },
+                768: { perView: 2 },
+                1024: { perView: 3 },
+                1200: { perView: 3 },
+                1900: { perView: 5 }
+            }
+        }).mount();
+    </script>
+</body>
+</html>
