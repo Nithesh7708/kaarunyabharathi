@@ -344,10 +344,21 @@ fill: #df9800 !important; /* Custom color for navigation arrows */
 }
 /* child creativity Section END*/
 /* Course information page==================> */
+#course_container{
+    overflow: hidden;
+    width: 100vw;
+    height: 380px;
+    margin: 20px 0px 0px 0px;
+    background-color: #711818;
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    justify-content:center; 
+}
 .course_container{
 width: 100vw;
 overflow:scroll;
-height: 350px;
+height: 400px;
 margin: 20px 0px;
 background-color: #711818;
 display: flex;
@@ -355,23 +366,23 @@ align-items:flex-start;
 flex-direction: column;
 justify-content:center;
 }
-.course_container .head{
-    height: 60px;
+#course_container .head{
+    height: 90px;
     width: 100%;
     display: flex;
-    align-items:flex-start;
+    align-items:flex-end;
     justify-content: center;
 }
-.course_container .head h1{
+#course_container .head h1{
     color: white;
     font-size: 1.5em;
 }
-.course_container .head i{
+#course_container .head i{
 margin: 0px 10px;
 }
 .course_container .course{
 width:auto;
-height:65%;
+height:80%;
 display: flex;
 justify-content:flex-start;
 align-items: center;
