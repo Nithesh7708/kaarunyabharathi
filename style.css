@@ -25,6 +25,35 @@ body{
   justify-content: center;
   flex-direction: column;
 }
+/* Social media --------*/
+.social_media_container{
+position: fixed;
+top: 0vh;
+left: 93vw;
+width: 0px;
+display: flex;
+height:100vh;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+z-index: 999;
+}
+.social_media_container .social{
+    position: relative;
+    padding: 5px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.social_media_container .social img{
+    width:100%;
+}
+/* Social media End--------*/
 /* Navcation section */
 .menu_icon{
     display: none;
@@ -580,9 +609,93 @@ overflow: hidden;
     color: #656565;
 }
 /* ------Feedback End Page------- */
+/* address section */
+.address_container{
+    background: #660f00;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.address_container .main_head{
+    height: 70px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    color: #540000;
+}
+.address_container .address_pages{
+    width: 90vw;
+    height:200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 30px;
+}
+.address_container .address_pages .address{
+width: 30vw;
+height: 100%;
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+cursor: pointer;
+border: #7a3333 solid 2px;
+}
+.address_container .address_pages .address .head{
+width: 60%;
+height: 40px;
+font-size: 12px;
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+border-radius: 30px 0px;
+background: #00000065;
+}
+.address_container .address_pages .address .location{
+    width: 100%;
+    height: 100px;
+    padding: 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px;
+}
+.address_container .address_pages .address a{
+    text-decoration: none;
+}
+/* address section END*/
 /* Mobile device */
 
 @media (max-width:480px) {
+    /* address section */
+
+.address_container .main_head{
+    height: 70px;
+    font-size: 14px;
+}
+.address_container .address_pages{
+    padding: 10px;
+    height: auto;
+    gap: 10px;
+    flex-direction: column;
+}
+.address_container .address_pages .address{
+width: 90vw;
+justify-content: flex-end;
+}
+
+
+/* address section END*/
 /* Highlight Content---------------- */
 .hightlight_container{
     padding: 20px;
@@ -875,6 +988,24 @@ width: 30%;
 /* ---------------------------------------- */
 
 @media(min-width:481px){
+       /* address section */
+
+.address_container .main_head{
+    height: 70px;
+}
+.address_container .address_pages{
+    padding: 10px;
+    height: auto;
+    gap: 10px;
+    flex-direction: column;
+}
+.address_container .address_pages .address{
+width: 70vw;
+justify-content: center;
+}
+
+
+/* address section END*/
     /* Highlight Content---------------- */
 .hightlight_container{
     padding: 20px;
@@ -1156,7 +1287,35 @@ width: 100%;
 /* ------------------------------------------- */
 
 @media (min-width: 769px) and (max-width: 1024px) {
-/* <!-- Institute Advantage --> */
+    /* Social media --------*/
+.social_media_container{
+    position: fixed;
+    top: 0vh;
+    left: 96vw;
+    }
+    
+   /* address section */
+
+   .address_container .main_head{
+    height: 70px;
+}
+.address_container .address_pages{
+    padding: 10px;
+    height: auto;
+    gap: 10px;
+    flex-direction: column;
+}
+.address_container .address_pages .address{
+width: 50vw;
+padding: 10px;
+border: #7a3333 solid 2px;
+border-radius: 10px;
+justify-content: flex-end;
+}
+
+
+/* address section END*/
+    /* <!-- Institute Advantage --> */
 .institute_container{
     height: 400px;
 }
@@ -1328,6 +1487,12 @@ width: 38%;
 /* ------------------------------------------- */
 
 @media(min-width:1025px){
+        /* Social media --------*/
+.social_media_container{
+    position: fixed;
+    top: 0vh;
+    left: 97vw;
+    }
 /* Highlight Content---------------- */
 .hightlight_container{
     padding: 20px;
@@ -1560,6 +1725,36 @@ align-items: center;
 /* ------------------------------------------- */
 
 @media(min-width:1201px){
+            /* Social media --------*/
+.social_media_container{
+    position: fixed;
+    top: 0vh;
+    left: 97vw;
+    }
+    /* address section */
+
+   .address_container .main_head{
+    height: 70px;
+}
+.address_container .address_pages{
+    padding: 10px;
+    height: auto;
+    gap: 10px;
+    flex-direction:row;
+}
+.address_container  .head {
+background: #bd5757;
+}
+.address_container .address_pages .address{
+width: 50vw;
+padding: 10px;
+border: #7a3333 solid 2px;
+border-radius: 10px;
+justify-content: flex-end;
+}
+
+
+/* address section END*/
     /* Highlight Content---------------- */
 .hightlight_container{
     padding: 20px;
