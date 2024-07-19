@@ -17,7 +17,11 @@
 .scroll{
     overflow-y:hidden;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
+
     font-family: "Roboto", sans-serif;
   font-style: normal;
   display: flex;
@@ -497,6 +501,7 @@ overflow: hidden;
 
 /* Highlight Content---------------- */
 .hightlight_container{
+    position: relative;
     max-width: 1920px;
     padding: 20px;
     width: 100vw;
@@ -506,6 +511,19 @@ overflow: hidden;
     align-items: center;
     justify-content: center;
     background-color: white;
+}
+.hightlight_container::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background:url('./source/background/drawing_moup.png');
+    background-position: center;
+    background-size:contain;
+    opacity: 0.2;
+
 }
 .hightlight_container .hightlight_section{
     width:30vw;
