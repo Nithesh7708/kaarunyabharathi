@@ -573,7 +573,7 @@ overflow: hidden;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    height: 110px;
+    height: 160px;
     width: 100%;
     text-align: center;
     font-size: 16px;
@@ -597,7 +597,7 @@ overflow: hidden;
     justify-content: center;
 }
 .feedback-content .user .name{
-    width: 40%;
+    width: 90%;
     margin: 0px 6px;
     display: flex;
     align-items: center;
@@ -619,11 +619,12 @@ overflow: hidden;
     color: rgb(255, 174, 0);
 }
 .feedback-content .message{
+    padding: 5px;
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 .feedback-content .message p{
     font-size: 14px;
@@ -916,16 +917,17 @@ justify-content: flex-end;
     height: auto;
 }
 .feedback-content .user .profile{
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
 }
 
 .feedback-content .user .name p{
-    font-size: 14px;
+    font-size: 12px;
 }
 .feedback-content .rate{
     height: 20px;
     width: 60%;
+    margin: 5px 0px;
 }
 .feedback-content .rate i{
     font-size: 12px;
@@ -936,7 +938,7 @@ justify-content: flex-end;
 }
 .feedback-content .message p{
     font-size: 13px;
-    text-align: center;
+    text-align:start;
     color: #656565;
 }
 /* ------Feedback End Page------- */
